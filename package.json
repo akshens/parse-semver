@@ -1,6 +1,6 @@
 {
   "name": "semver-tag",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Extracts Semver version tag which can be used as npm tag",
   "main": "index.js",
   "scripts": {
