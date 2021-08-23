@@ -9,5 +9,6 @@ try {
 } catch (error) {
   console.error(error);
   core.debug(error);
-  core.setFailed(error.message);
+  core.error(`Error ${err}`);
+  core.setFailed(`Action failed with error ${error}`);
 }
