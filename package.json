@@ -2,7 +2,7 @@
   "name": "semver-prase",
   "version": "0.0.0",
   "description": "Parses SemVer version which can be a tag",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "build": "rimraf dist && ncc build -m -C --license licenses.txt"
