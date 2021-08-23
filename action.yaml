@@ -1,4 +1,4 @@
-name: "SemVer Parse"
+name: "Parse SemVer"
 description: "Parses SemVer version which can be a tag"
 author: "xeptore"
 inputs:
