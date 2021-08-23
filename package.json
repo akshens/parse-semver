@@ -1,6 +1,6 @@
 {
-  "name": "parse-semver",
-  "version": "4.0.0",
+  "name": "semver-parse",
+  "version": "3.0.0",
   "description": "Parses SemVer version which can be a tag",
   "main": "index.js",
   "scripts": {
@@ -9,36 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akshens/parse-semver.git"
+    "url": "git+https://github.com/akshens/semver-parse.git"
   },
   "keywords": [
-    "parse",
-    "parser",
-    "semver",
     "action",
-    "publish",
-    "release",
-    "semver-parse",
+    "semver",
+    "parse",
     "semver-parser",
-    "github-action",
-    "semver-publish",
-    "semver-release",
-    "semver-publish-tag",
-    "semver-release-tag",
-    "semver-parse-github-action",
-    "semver-parser-github-action",
-    "semver-release-github-action",
-    "semver-publish-github-action",
-    "semver-publish-github-action-tag",
-    "semver-publish-tag-github-action",
-    "semver-release-tag-github-action"
+    "parse-semver",
+    "parse-semver-action",
+    "semver-parser-action",
+    "parser"
   ],
   "author": "xeptore",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/akshens/parse-semver/issues"
+    "url": "https://github.com/akshens/semver-parse/issues"
   },
-  "homepage": "https://github.com/akshens/parse-semver#readme",
+  "homepage": "https://github.com/akshens/semver-parse#readme",
   "dependencies": {
     "@actions/core": "^1.5.0",
     "semver": "^7.3.5"
