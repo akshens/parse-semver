@@ -7,8 +7,5 @@ try {
   core.setOutput("is-prerelease", JSON.stringify(isPreRelease));
   core.setOutput("tag", tag);
 } catch (error) {
-  console.error(error);
-  core.debug(error);
-  core.error(`Error ${err}`);
-  core.setFailed(`Action failed with error ${error}`);
+  core.setFailed(`Action failed with error: ${error.message}`);
 }
