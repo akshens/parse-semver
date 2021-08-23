@@ -1,6 +1,6 @@
 {
   "name": "parse-semver",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Parses SemVer version which can be a tag",
   "main": "index.js",
   "scripts": {
