@@ -1,0 +1,27 @@
+name: "SemVer Parse"
+description: "Parses SemVer version which can be a tag"
+author: "xeptore"
+inputs:
+  version:
+    description: "Input version to get parsed"
+    required: true
+outputs:
+  is-prerelease:
+    description: "Indicates whether the version is a pre-release"
+  tag:
+    description: |
+      Version tag, whether is a release or a pre-release.
+      Is is guaranteed that `tag` output has a value.
+      In case when the `version` is detected as a pre-release version,
+      if there is an identifier provided in the `version`,
+      e.g., using `--preid` option of `npm version` command,
+      the provided identifier will be returned as the `tag`,
+      otherwise, `dev` tag will be returned.
+      And in case where the version is detected as a version (non-pre-release),
+      the `tag` value will be `latest`.
+runs:
+  using: "node12"
+  main: "dist/index.js"
+branding:
+  color: gray-dark
+  icon: cloud-snow
