@@ -1,5 +1,5 @@
 const isValidSemverVersion = require('semver/functions/valid');
-const praseSemverVersionPreRelease = require('semver/functions/prerelease');
+const parseSemverVersionPreRelease = require('semver/functions/prerelease');
 
 function parsePreReleaseTag(prerelease) {
   if (prerelease.length === 1) {
@@ -13,7 +13,7 @@ function parse(version) {
     throw new Error('Invalid semver version is provided')
   }
 
-  const prerelease = praseSemverVersionPreRelease(version);
+  const prerelease = parseSemverVersionPreRelease(version);
 
   const isPreRelease = prerelease !== null;
   const tag = isPreRelease ? parsePreReleaseTag(prerelease) : 'latest';
