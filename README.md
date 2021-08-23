@@ -1,15 +1,15 @@
-# SemVer Parse GitHub Action
+# Semver Tag GitHub Action
 
 [![pnpm](https://img.shields.io/static/v1?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACLz2ctAAADI0lEQVR4nO3YIY5VWRSG0aNIMBhEJ8yBYBgACskAWuB7Fig044B6pBOStjAsXiF2W/Io9wj3fFXrS35/du5Sdy3pyObjenQ+rSnv+2l9u7zr9vN6e/S7rt3tzfrn8q7zzfpy9Luu3XxeTwEMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgAjAzA1gCMDMDIAGwNwMgeBMC11vp+s76Wd3uzPlx+qB+f1uuj33X1TuvNLwBP6/3h77py8996cnmXJEmSlG9m/pqZV/E9u7zr/O96/uPTelXeARz+fDPzdvo9jN8w97EBcNsB2AnAagPgtgOwE4DVBsBtB2AnAKsNgNsOwE4AVhsAtx2AnQCsNgBuOwA7AVhtANx2AHYCsNoAuO0A7ARgtQFw2wHYCcBqA+C2A7ATgNUGwG0HYCcAqw2A2w7ATgBWGwC3HYCdAKw2AG47ADsBWG0A3HYAdgKw2gC47QDsBGC1AXDbAdgJwGoD4LYDsBOA1QbAbQdgJwCrDYDbDsBOAFYbALcdgJ0ArDYAbjsAOwFYbQDcdgB2ArDaALjtHgrAFzPzLr6Xl3edT+vv82m9K28+rsdHmJAkSdJGzczX+D7ccdPrDd517d7ccdf7Dd517Z78fNCj6fftjg91L3/DzMyXox/1G3r680EA7huAkQBsBWAkACMB2ArASABGArAVgJEAjARgKwAjARgJwFYARgIwEoCtAIwEYCQAWwEYCcBIALYCMBKAkQBsBWAkACMB2ArASABGArAVgJEAjARgKwAjARgJwFYARgIwEoCtAIwEYCQAWwEYCcBIALYCMBKAkQBsBWAkACMB2ArASABGArAVgJEAjARgKwAjARgJwFYARgIwEoCtAIwEYCQAWwEY6f4DlCRJR/Q/zoV3IvK4wkkAAAAASUVORK5CYII=&label=managed%20by&message=pnpm&color=informational)](https://pnpm.js.org/)
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 
-GitHub Action that parses SemVer version which can be a tag.
+GitHub Action that extracts Semver version tag which can be used as npm tag.
 
 ## Inputs
 
 - `version`
 
-  **Required** Input version to get parsed
+  **Required** Input version to get parsed. It may contain 'v' prefix.
 
 ## Outputs
 
@@ -32,16 +32,16 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       # Use the action somewhere among the steps
-      - name: Parse SemVer
+      - name: Semver Tag
         # This `id` is required to be referenced later from other steps
-        id: ParseSemVer
-        uses: akshens/parse-semver@v3
+        id: SemverTag
+        uses: akshens/semver-tag@v4
         with:
           version: 1.2.3
       # And in some later step:
       - name: Publish to GPR
         # You can use the action outputs, for example the `tag` output, like this:
-        run: npm publish --tag ${{ steps.SemVerParse.outputs.tag }}
+        run: npm publish --tag ${{ steps.SemverTag.outputs.tag }} # npm publish --tag latest
 ```
 
 ### Input/Output Examples
@@ -51,7 +51,7 @@ jobs:
   - Input:
 
     ```yaml
-    uses: "akshens/semver-parse@v1"
+    uses: "akshens/semver-tag@v4"
     with:
       version: "1.3.6-alpha.3"
     ```
@@ -68,7 +68,7 @@ jobs:
   - Input:
 
     ```yaml
-    uses: "akshens/semver-parse@v1"
+    uses: "akshens/semver-tag@v4"
     with:
       version: "1.0.6-1"
     ```
@@ -85,7 +85,7 @@ jobs:
   - Input:
 
     ```yaml
-    uses: "akshens/semver-parse@v1"
+    uses: "akshens/semver-tag@v4"
     with:
       version: "1.3.0"
     ```

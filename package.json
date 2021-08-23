@@ -1,7 +1,7 @@
 {
   "name": "semver-tag",
   "version": "4.0.0",
-  "description": "Extracts Semver version tag which can be used as npm tag",
+  "description": "GitHub Action that extracts Semver version tag which can be used as npm tag",
   "main": "index.js",
   "scripts": {
     "test": "jest",
