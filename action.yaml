@@ -1,9 +1,9 @@
-name: "SemVer Parse"
-description: "Parses SemVer version which can be a tag"
+name: "Semver Tag"
+description: "Extracts Semver version tag which can be used as npm tag"
 author: "xeptore"
 inputs:
   version:
-    description: "Input version to get parsed"
+    description: "Input version to get parsed. It may contain 'v' prefix"
     required: true
 outputs:
   is-prerelease:
