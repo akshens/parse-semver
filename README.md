@@ -23,6 +23,29 @@ GitHub Action that parses SemVer version which can be a tag.
 
 ## Example Usage
 
+You can use action output by setting an `id` field to the step that `uses` this action. For example:
+
+```yaml
+jobs:
+  PublishGPR:
+    name: Publish Package to GitHub Package Registry
+    runs-on: ubuntu-20.04
+    steps:
+      # Use the action somewhere among the steps
+      - name: Parse SemVer
+        # This `id` is required to be referenced later from other steps
+        id: ParseSemVer
+        uses: akshens/parse-semver@v3
+        with:
+          version: 1.2.3
+      # And in some later step:
+      - name: Publish to GPR
+        # You can use the action outputs, for example the `tag` output, like this:
+        run: npm publish --tag ${{ steps.SemVerParse.outputs.tag }}
+```
+
+### Input/Output Examples
+
 - Successful pre-release version with identifier parse:
 
   - Input:
