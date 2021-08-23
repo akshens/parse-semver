@@ -1,5 +1,5 @@
 {
-  "name": "semver-prase",
+  "name": "semver-parse",
   "version": "1.0.0",
   "description": "Parses SemVer version which can be a tag",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akshens/semver-prase.git"
+    "url": "git+https://github.com/akshens/semver-parse.git"
   },
   "keywords": [
     "action",
@@ -24,9 +24,9 @@
   "author": "xeptore",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/akshens/semver-prase/issues"
+    "url": "https://github.com/akshens/semver-parse/issues"
   },
-  "homepage": "https://github.com/akshens/semver-prase#readme",
+  "homepage": "https://github.com/akshens/semver-parse#readme",
   "dependencies": {
     "@actions/core": "^1.5.0",
     "semver": "^7.3.5"
