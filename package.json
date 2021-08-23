@@ -1,7 +1,7 @@
 {
-  "name": "parse-semver",
-  "version": "4.0.0",
-  "description": "Parses SemVer version which can be a tag",
+  "name": "semver-tag",
+  "version": "3.0.0",
+  "description": "Extracts Semver version tag which can be used as npm tag",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akshens/parse-semver.git"
+    "url": "git+https://github.com/akshens/semver-tag.git"
   },
   "keywords": [
     "parse",
@@ -36,9 +36,9 @@
   "author": "xeptore",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/akshens/parse-semver/issues"
+    "url": "https://github.com/akshens/semver-tag/issues"
   },
-  "homepage": "https://github.com/akshens/parse-semver#readme",
+  "homepage": "https://github.com/akshens/semver-tag#readme",
   "dependencies": {
     "@actions/core": "^1.5.0",
     "semver": "^7.3.5"
