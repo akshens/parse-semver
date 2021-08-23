@@ -21,7 +21,7 @@ outputs:
       the `tag` value will be `latest`.
 runs:
   using: "node12"
-  main: "dist/index.js"
+  main: "index.js"
 branding:
   color: gray-dark
   icon: cloud-snow
