@@ -10,7 +10,7 @@ function parsePreReleaseTag(prerelease) {
 
 function parse(version) {
   if (!isValidSemverVersion(version)) {
-    throw new Error('Invalid semver version is provided')
+    throw new Error(`Invalid semver version <${version}> is provided`)
   }
 
   const prerelease = parseSemverVersionPreRelease(version);

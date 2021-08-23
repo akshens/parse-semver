@@ -1,7 +1,7 @@
 const parse = require('./parse');
 
 it('Should throw error on invalid semver version 1.a.5', () => {
-  expect(() => parse('1.a.5')).toThrow('Invalid semver version is provided')
+  expect(() => parse('1.a.5')).toThrow('Invalid semver version <1.a.5> is provided')
 })
 
 it('Should parse 1.3.6-alpha.3', () => {
